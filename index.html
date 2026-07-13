@@ -588,6 +588,247 @@
         gap: 14px;
       }
 
+
+      /* Mother Together: BX·CX 분석 흐름 */
+      .bxcx-section {
+        margin-top: 48px;
+        padding-top: 40px;
+        padding-bottom: 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .bxcx-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.55fr);
+        gap: 24px;
+        align-items: end;
+        margin-bottom: 28px;
+      }
+
+      .bxcx-label {
+        display: inline-flex;
+        align-items: center;
+        width: fit-content;
+        min-height: 32px;
+        margin-bottom: 12px;
+        padding: 6px 11px;
+        border-radius: 999px;
+        background: rgba(245, 27, 99, 0.09);
+        border: 1px solid rgba(245, 27, 99, 0.2);
+        color: #d51452;
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+      }
+
+      .bxcx-title {
+        margin: 0;
+        font-size: clamp(30px, 4.3vw, 50px);
+        line-height: 1.04;
+        letter-spacing: -0.065em;
+      }
+
+      .bxcx-desc {
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+        letter-spacing: -0.02em;
+      }
+
+      .bxcx-flow {
+        display: grid;
+        gap: 22px;
+      }
+
+      .bxcx-item {
+        margin: 0;
+        overflow: hidden;
+        border: 1px solid rgba(17, 17, 17, 0.1);
+        border-radius: var(--radius-md);
+        background: rgba(255, 255, 255, 0.58);
+        box-shadow: 0 14px 42px rgba(27, 23, 17, 0.07);
+      }
+
+      .zoom-button {
+        display: block;
+        width: 100%;
+        padding: 0;
+        border: 0;
+        background: #ffffff;
+        cursor: zoom-in;
+      }
+
+      .zoom-button img {
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: transform 0.28s ease;
+      }
+
+      .zoom-button:hover img {
+        transform: scale(1.01);
+      }
+
+      .bxcx-caption {
+        display: grid;
+        grid-template-columns: 44px minmax(0, 1fr);
+        gap: 14px;
+        align-items: flex-start;
+        padding: 18px 20px 20px;
+        border-top: 1px solid rgba(17, 17, 17, 0.08);
+      }
+
+      .bxcx-step {
+        display: grid;
+        place-items: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: var(--ink);
+        color: var(--bg);
+        font-size: 12px;
+        font-weight: 900;
+      }
+
+      .bxcx-copy strong {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 16px;
+        letter-spacing: -0.035em;
+      }
+
+      .bxcx-copy p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        letter-spacing: -0.02em;
+      }
+
+      .bxcx-result {
+        margin-top: 24px;
+        padding: 22px 24px;
+        border-radius: var(--radius-md);
+        background:
+          linear-gradient(
+            135deg,
+            rgba(245, 27, 99, 0.08),
+            rgba(143, 161, 132, 0.16)
+          ),
+          rgba(255, 255, 255, 0.52);
+        border: 1px solid rgba(17, 17, 17, 0.1);
+      }
+
+      .bxcx-result strong {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 17px;
+        letter-spacing: -0.035em;
+      }
+
+      .bxcx-result p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+        letter-spacing: -0.02em;
+      }
+
+      .implementation-section {
+        margin-top: 48px;
+        padding-top: 40px;
+        padding-bottom: 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .implementation-head {
+        margin-bottom: 24px;
+      }
+
+      .implementation-head h3 {
+        margin: 0;
+        font-size: clamp(28px, 4vw, 46px);
+        line-height: 1.08;
+        letter-spacing: -0.06em;
+      }
+
+      .implementation-head p {
+        max-width: 760px;
+        margin: 14px 0 0;
+        color: var(--muted);
+        font-size: 15px;
+        letter-spacing: -0.02em;
+      }
+
+      .chip.pink {
+        background: rgba(245, 27, 99, 0.09);
+        border-color: rgba(245, 27, 99, 0.18);
+        color: #b90f49;
+      }
+
+      /* 이미지 크게 보기 */
+      body.modal-open {
+        overflow: hidden;
+      }
+
+      .image-modal {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        display: grid;
+        place-items: center;
+        padding: 28px;
+        background: rgba(10, 10, 10, 0.86);
+        backdrop-filter: blur(10px);
+      }
+
+      .image-modal[hidden] {
+        display: none;
+      }
+
+      .image-modal-dialog {
+        position: relative;
+        width: min(1400px, 96vw);
+        max-height: 92vh;
+        display: grid;
+        gap: 12px;
+      }
+
+      .image-modal-scroll {
+        max-height: 84vh;
+        overflow: auto;
+        border-radius: 18px;
+        background: #ffffff;
+        box-shadow: 0 28px 100px rgba(0, 0, 0, 0.36);
+      }
+
+      .image-modal-img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .image-modal-caption {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 14px;
+        text-align: center;
+      }
+
+      .image-modal-close {
+        position: absolute;
+        right: -12px;
+        top: -12px;
+        width: 44px;
+        height: 44px;
+        border: 1px solid rgba(255, 255, 255, 0.26);
+        border-radius: 50%;
+        background: rgba(17, 17, 17, 0.9);
+        color: #ffffff;
+        font-size: 24px;
+        line-height: 1;
+        cursor: pointer;
+      }
+
       .project-detail {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -769,6 +1010,7 @@
       @media (max-width: 980px) {
         .hero-grid,
         .section-head,
+        .bxcx-head,
         .contact-panel {
           grid-template-columns: 1fr;
         }
@@ -892,6 +1134,37 @@
           font-size: 32px;
         }
 
+        .bxcx-section,
+        .implementation-section {
+          margin-top: 36px;
+          padding-top: 30px;
+          padding-bottom: 0;
+        }
+
+        .bxcx-flow {
+          gap: 16px;
+        }
+
+        .bxcx-caption {
+          grid-template-columns: 1fr;
+          gap: 10px;
+          padding: 16px;
+        }
+
+        .bxcx-step {
+          width: 38px;
+          height: 38px;
+        }
+
+        .image-modal {
+          padding: 12px;
+        }
+
+        .image-modal-close {
+          right: 4px;
+          top: 4px;
+        }
+
         .focus-grid {
           grid-template-columns: 1fr;
         }
@@ -931,14 +1204,14 @@
           <div class="eyebrow">포트폴리오</div>
 
           <h1>
-              사용자의 말을<br />
-              실제 서비스로<br />
-              구현합니다
+            고객의 목소리를<br />
+            실제 서비스로<br />
+            구현합니다
           </h1>
 
           <p class="hero-copy">
-            음성 입력을 AI가 이해하고, API 연동과 데이터 기록을 통해
-            화면과 기기가 함께 반응하는 서비스 흐름을 구현했습니다.
+            사용자 데이터를 통해 문제를 정의하고, AI와 외부 API를 연결해
+            화면과 기기가 실제로 반응하는 서비스 흐름을 구현했습니다.
           </p>
 
           <div class="hero-actions">
@@ -951,21 +1224,21 @@
           <div class="orbit"></div>
           <div class="orbit two"></div>
 
-          <div class="node n1">음성 발화</div>
+          <div class="node n1">VOC 분석</div>
           <div class="node n2">의도 분석</div>
           <div class="node n3">가전 실행</div>
           <div class="node n4">기록 저장</div>
 
           <div class="core">
-            말 한마디<br />
+            고객 분석<br />
             → AI 판단<br />
             → 서비스 실행
           </div>
 
           <div class="visual-caption">
-            <strong>AI 스마트홈 케어 서비스 구현 흐름</strong>
+            <strong>고객 데이터에서 서비스 구현까지</strong>
             <span>
-              음성 발화 → AI 의도 분석 → 가전·조명 제어 → 3D 반응·기록 저장
+              VOC 수집·분석 → 기회영역 도출 → AI 판단 → 가전·화면 반응
             </span>
           </div>
         </div>
@@ -997,11 +1270,12 @@
               <span class="project-no">01</span>
 
               <span class="project-heading">
-                <span class="project-type">AI 스마트홈 케어 서비스 MVP</span>
+                <span class="project-type">BX·CX Insight to AI Service MVP</span>
                 <span class="project-title">Mother Together</span>
                 <span class="project-summary">
-                  임산부와 배우자의 생활 발화를 AI가 이해하고,
-                  스마트홈 가전 제어와 기록까지 연결하는 AI 기반 홈케어 서비스 MVP입니다.
+                  임산부 VOC 469,020건을 수집·분석해 고객군과 핵심 기회영역을 정의하고,
+                  분석 결과를 음성 기반 AI 판단, 스마트홈 가전 제어,
+                  배우자 지원과 생활 기록 기능으로 연결한 홈케어 서비스 MVP입니다.
                 </span>
               </span>
 
@@ -1009,56 +1283,387 @@
             </button>
 
             <div class="project-content" id="project-01-content" hidden>
-              <div class="project-links">
-                
-              </div>
-
-              <div class="project-gallery" aria-label="Mother Together images">
-                <div class="gallery-frame">
-                  <img src="assets/mother-architecture.png"
-  alt="Mother Together 서비스 아키텍처" />
-                </div>
-
-                <div class="gallery-row">
-                  <div class="gallery-frame">
-                    <img src="assets/mother-preview-01.png"
-  alt="Mother Together 모바일 앱 화면" />
-                  </div>
-
-                  <div class="gallery-frame">
-                    <img src="assets/mother-preview-02.png"
-  alt="Mother Together 3D 시뮬레이터 화면"/>
-                  </div>
-                </div>
-              </div>
-
               <div class="project-detail">
                 <div class="detail-box">
                   <h4>Problem</h4>
                   <p>
-                    임산부는 컨디션 변화가 잦지만, 매번 앱에 상태를 입력하거나
-                    여러 가전을 하나씩 조작하기 어렵습니다.
+                    임산부는 신체와 감정 상태가 자주 변하지만,
+                    매번 앱에 상태를 기록하거나 여러 가전을 직접 조작하기 어렵습니다.
+                    배우자 또한 언제 어떤 도움이 필요한지 바로 알기 어렵습니다.
                   </p>
                 </div>
 
                 <div class="detail-box">
-                  <h4>Built</h4>
+                  <h4>Approach</h4>
                   <p>
-                    음성 발화, AI 의도 분석, ThinQ 공기청정기 제어,
-                    Hue 조명 제어, 3D 홈 시뮬레이터 반응, Supabase 기록 저장을 연결했습니다.
+                    임신 관련 VOC를 수집·전처리하고,
+                    임베딩·계층적 군집·토픽 분석·중요도와 만족도 기반 기회영역 분석으로
+                    핵심 고객군과 서비스 요구를 구조화했습니다.
                   </p>
                 </div>
 
                 <div class="detail-box">
                   <h4>Role</h4>
                   <p>
-                    서비스 기획, 데이터 분석, 프론트엔드 구현, API 연동,
-                    시연 환경 구성까지 프로젝트 전반을 담당했습니다.
+                    서비스 기획, 데이터 수집·전처리·분석,
+                    프론트엔드 구현, AI와 외부 API 연동,
+                    Supabase 데이터 설계와 시연 환경 구성을 담당했습니다.
                   </p>
                 </div>
               </div>
 
-              <div class="stack">
+              <section class="bxcx-section" aria-labelledby="mother-bxcx-title">
+                <div class="bxcx-head">
+                  <div>
+                    <span class="bxcx-label">BX·CX Analysis Flow</span>
+                    <h3 class="bxcx-title" id="mother-bxcx-title">
+                      고객의 목소리를 서비스 기회로 바꾼 과정
+                    </h3>
+                  </div>
+
+                  <p class="bxcx-desc">
+                    시장과 고객 관점에서 문제를 정의한 뒤,
+                    대규모 VOC를 정제하고 고객군·토픽·기회영역을 검증해
+                    Mother Together의 서비스 기능으로 연결했습니다.
+                    이미지를 클릭하면 크게 볼 수 있습니다.
+                  </p>
+                </div>
+
+                <div class="bxcx-flow">
+                <figure class="bxcx-item">
+                  <button
+                    class="zoom-button js-image-modal"
+                    type="button"
+                    data-image="assets/mother-bxcx-01-direction.png"
+                    data-caption="시장·고객·경쟁·기업 방향성 분석"
+                    aria-label="시장·고객·경쟁·기업 방향성 분석 이미지 크게 보기"
+                  >
+                    <img
+                      src="assets/mother-bxcx-01-direction.png"
+                      alt="시장 고객 경쟁 기업 관점에서 임산부 케어 서비스 방향성을 정의한 분석"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </button>
+
+                  <figcaption class="bxcx-caption">
+                    <span class="bxcx-step">01</span>
+                    <div class="bxcx-copy">
+                      <strong>시장·고객·경쟁·기업 방향성 분석</strong>
+                      <p>스마트홈 핵심 고객층, 임산부의 검증된 앱 수요, 경쟁 환경과 LG전자의 제품 방향성을 연결해 서비스 명분을 정의했습니다.</p>
+                    </div>
+                  </figcaption>
+                </figure>
+
+                <figure class="bxcx-item">
+                  <button
+                    class="zoom-button js-image-modal"
+                    type="button"
+                    data-image="assets/mother-bxcx-02-research.png"
+                    data-caption="VOC 수집·전처리 기준 설계"
+                    aria-label="VOC 수집·전처리 기준 설계 이미지 크게 보기"
+                  >
+                    <img
+                      src="assets/mother-bxcx-02-research.png"
+                      alt="임산부 VOC 수집 플랫폼 검색 키워드 전처리 불용어 기준"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </button>
+
+                  <figcaption class="bxcx-caption">
+                    <span class="bxcx-step">02</span>
+                    <div class="bxcx-copy">
+                      <strong>VOC 수집·전처리 기준 설계</strong>
+                      <p>블로그와 임신 커뮤니티를 대상으로 수집 플랫폼, 검색 키워드, 텍스트 정제 기준과 도메인 불용어를 정의했습니다.</p>
+                    </div>
+                  </figcaption>
+                </figure>
+
+                <figure class="bxcx-item">
+                  <button
+                    class="zoom-button js-image-modal"
+                    type="button"
+                    data-image="assets/mother-bxcx-03-data-source.png"
+                    data-caption="총 469,020건의 임산부 VOC 수집"
+                    aria-label="총 469,020건의 임산부 VOC 수집 이미지 크게 보기"
+                  >
+                    <img
+                      src="assets/mother-bxcx-03-data-source.png"
+                      alt="여러 플랫폼에서 수집한 임산부 VOC 469020건"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </button>
+
+                  <figcaption class="bxcx-caption">
+                    <span class="bxcx-step">03</span>
+                    <div class="bxcx-copy">
+                      <strong>총 469,020건의 임산부 VOC 수집</strong>
+                      <p>임산부의 일상과 고민을 함께 분석하기 위해 네이버 블로그, 마미톡, 맘스홀릭, 베이비빌리, 브런치 데이터를 통합했습니다.</p>
+                    </div>
+                  </figcaption>
+                </figure>
+
+                <figure class="bxcx-item">
+                  <button
+                    class="zoom-button js-image-modal"
+                    type="button"
+                    data-image="assets/mother-bxcx-04-preprocessing-result.png"
+                    data-caption="분석 가능한 데이터 460,522건 확보"
+                    aria-label="분석 가능한 데이터 460,522건 확보 이미지 크게 보기"
+                  >
+                    <img
+                      src="assets/mother-bxcx-04-preprocessing-result.png"
+                      alt="초기 데이터 469020건 중 8498건을 제거하고 460522건을 확보한 결과"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </button>
+
+                  <figcaption class="bxcx-caption">
+                    <span class="bxcx-step">04</span>
+                    <div class="bxcx-copy">
+                      <strong>분석 가능한 데이터 460,522건 확보</strong>
+                      <p>중복, 광고성 게시글, 짧은 문장 등 분석에 적합하지 않은 8,498건을 제거해 데이터 신뢰도를 높였습니다.</p>
+                    </div>
+                  </figcaption>
+                </figure>
+
+                <figure class="bxcx-item">
+                  <button
+                    class="zoom-button js-image-modal"
+                    type="button"
+                    data-image="assets/mother-bxcx-05-preprocessing-flow.png"
+                    data-caption="7단계 텍스트 전처리 및 데이터 밸런싱"
+                    aria-label="7단계 텍스트 전처리 및 데이터 밸런싱 이미지 크게 보기"
+                  >
+                    <img
+                      src="assets/mother-bxcx-05-preprocessing-flow.png"
+                      alt="텍스트 전처리 데이터 밸런싱 소수 데이터 보정 감성 점수화 과정"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </button>
+
+                  <figcaption class="bxcx-caption">
+                    <span class="bxcx-step">05</span>
+                    <div class="bxcx-copy">
+                      <strong>7단계 텍스트 전처리 및 데이터 밸런싱</strong>
+                      <p>URL·해시태그·중복·짧은 문장·도메인 불용어를 제거하고, 채널별 불균형과 소수 데이터를 보정한 뒤 감성 점수를 산출했습니다.</p>
+                    </div>
+                  </figcaption>
+                </figure>
+
+                <figure class="bxcx-item">
+                  <button
+                    class="zoom-button js-image-modal"
+                    type="button"
+                    data-image="assets/mother-bxcx-06-dendrogram.png"
+                    data-caption="Ward 계층적 군집으로 6개 고객 구조 확인"
+                    aria-label="Ward 계층적 군집으로 6개 고객 구조 확인 이미지 크게 보기"
+                  >
+                    <img
+                      src="assets/mother-bxcx-06-dendrogram.png"
+                      alt="Ward 계층적 군집 분석을 통해 6개 고객 구조를 확인한 덴드로그램"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </button>
+
+                  <figcaption class="bxcx-caption">
+                    <span class="bxcx-step">06</span>
+                    <div class="bxcx-copy">
+                      <strong>Ward 계층적 군집으로 6개 고객 구조 확인</strong>
+                      <p>임베딩 간 거리를 기준으로 데이터의 병합 과정을 시각화하고, 고객 니즈가 6개의 대분류로 나뉘는 구조를 확인했습니다.</p>
+                    </div>
+                  </figcaption>
+                </figure>
+
+                <figure class="bxcx-item">
+                  <button
+                    class="zoom-button js-image-modal"
+                    type="button"
+                    data-image="assets/mother-bxcx-07-silhouette.png"
+                    data-caption="실루엣 지수로 적정 군집 수 검증"
+                    aria-label="실루엣 지수로 적정 군집 수 검증 이미지 크게 보기"
+                  >
+                    <img
+                      src="assets/mother-bxcx-07-silhouette.png"
+                      alt="실루엣 지수 분석 결과 K 6에서 최고점 0.416을 기록한 군집 수 검증"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </button>
+
+                  <figcaption class="bxcx-caption">
+                    <span class="bxcx-step">07</span>
+                    <div class="bxcx-copy">
+                      <strong>실루엣 지수로 적정 군집 수 검증</strong>
+                      <p>K=2부터 K=9까지 비교한 결과 K=6에서 최고점 0.416을 기록해 6개 군집의 응집도와 분리도가 가장 안정적임을 확인했습니다.</p>
+                    </div>
+                  </figcaption>
+                </figure>
+
+                <figure class="bxcx-item">
+                  <button
+                    class="zoom-button js-image-modal"
+                    type="button"
+                    data-image="assets/mother-bxcx-08-embedding.png"
+                    data-caption="6개 고객 세그먼트의 공간적 분리 확인"
+                    aria-label="6개 고객 세그먼트의 공간적 분리 확인 이미지 크게 보기"
+                  >
+                    <img
+                      src="assets/mother-bxcx-08-embedding.png"
+                      alt="PCA와 UMAP으로 3072차원 데이터를 2차원으로 축소한 6개 군집 시각화"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </button>
+
+                  <figcaption class="bxcx-caption">
+                    <span class="bxcx-step">08</span>
+                    <div class="bxcx-copy">
+                      <strong>6개 고객 세그먼트의 공간적 분리 확인</strong>
+                      <p>3,072차원 임베딩을 PCA와 UMAP으로 축소해 각 고객군이 공간적으로 구분되는 패턴을 시각적으로 검증했습니다.</p>
+                    </div>
+                  </figcaption>
+                </figure>
+
+                <figure class="bxcx-item">
+                  <button
+                    class="zoom-button js-image-modal"
+                    type="button"
+                    data-image="assets/mother-bxcx-09-actor-analysis.png"
+                    data-caption="고객군별 핵심 토픽 수 최적화"
+                    aria-label="고객군별 핵심 토픽 수 최적화 이미지 크게 보기"
+                  >
+                    <img
+                      src="assets/mother-bxcx-09-actor-analysis.png"
+                      alt="6개 고객군별 실루엣 지수와 퍼플렉서티를 비교한 토픽 수 분석"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </button>
+
+                  <figcaption class="bxcx-caption">
+                    <span class="bxcx-step">09</span>
+                    <div class="bxcx-copy">
+                      <strong>고객군별 핵심 토픽 수 최적화</strong>
+                      <p>각 고객군마다 실루엣 지수와 퍼플렉서티를 비교해 고객군을 대표하는 세부 토픽 수를 선정했습니다.</p>
+                    </div>
+                  </figcaption>
+                </figure>
+
+                <figure class="bxcx-item">
+                  <button
+                    class="zoom-button js-image-modal"
+                    type="button"
+                    data-image="assets/mother-bxcx-10-opportunity.png"
+                    data-caption="중요도·만족도 기반 핵심 기회영역 선정"
+                    aria-label="중요도·만족도 기반 핵심 기회영역 선정 이미지 크게 보기"
+                  >
+                    <img
+                      src="assets/mother-bxcx-10-opportunity.png"
+                      alt="임산부 고객 불편을 중요도와 만족도로 비교해 핵심 기회영역을 도출한 분석"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </button>
+
+                  <figcaption class="bxcx-caption">
+                    <span class="bxcx-step">10</span>
+                    <div class="bxcx-copy">
+                      <strong>중요도·만족도 기반 핵심 기회영역 선정</strong>
+                      <p>중요도가 높지만 만족도가 낮은 항목을 중심으로 신체 불편, 환경 부담, 관계·감정 부담 등의 서비스 기회를 도출했습니다.</p>
+                    </div>
+                  </figcaption>
+                </figure>
+                </div>
+
+                <div class="bxcx-result">
+                  <strong>분석 결과를 서비스 기능으로 연결했습니다.</strong>
+                  <p>
+                    신체 변화와 환경 부담에는 음성 기반 가전·조명 제어를,
+                    정서적 불안과 관계 부담에는 배우자 알림과 상태 공유를,
+                    지속적인 생활 관리에는 이벤트 로그와 기록 기능을 설계했습니다.
+                  </p>
+                </div>
+              </section>
+
+              <section
+                class="implementation-section"
+                aria-labelledby="mother-implementation-title"
+              >
+                <div class="implementation-head">
+                  <h3 id="mother-implementation-title">
+                    분석 결과를 실제 MVP로 구현
+                  </h3>
+                  <p>
+                    사용자의 음성 발화가 AI 의도 분석을 거쳐
+                    ThinQ 공기청정기, Philips Hue 조명, 3D 홈 화면,
+                    Supabase 기록 저장으로 이어지도록 연결했습니다.
+                    이미지를 클릭하면 크게 볼 수 있습니다.
+                  </p>
+                </div>
+
+                <div class="project-gallery" aria-label="Mother Together 구현 이미지">
+                  <div class="gallery-frame">
+                    <button
+                      class="zoom-button js-image-modal"
+                      type="button"
+                      data-image="assets/mother-architecture.png"
+                      data-caption="Mother Together 서비스 아키텍처"
+                      aria-label="Mother Together 서비스 아키텍처 이미지 크게 보기"
+                    >
+                      <img
+                        src="assets/mother-architecture.png"
+                        alt="Mother Together 서비스 아키텍처"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </button>
+                  </div>
+
+                  <div class="gallery-row">
+                    <div class="gallery-frame">
+                      <button
+                        class="zoom-button js-image-modal"
+                        type="button"
+                        data-image="assets/mother-preview-01.png"
+                        data-caption="Mother Together 모바일 앱 화면"
+                        aria-label="Mother Together 모바일 앱 화면 이미지 크게 보기"
+                      >
+                        <img
+                          src="assets/mother-preview-01.png"
+                          alt="Mother Together 모바일 앱 화면"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </button>
+                    </div>
+
+                    <div class="gallery-frame">
+                      <button
+                        class="zoom-button js-image-modal"
+                        type="button"
+                        data-image="assets/mother-preview-02.png"
+                        data-caption="Mother Together 3D 시뮬레이터 화면"
+                        aria-label="Mother Together 3D 시뮬레이터 화면 이미지 크게 보기"
+                      >
+                        <img
+                          src="assets/mother-preview-02.png"
+                          alt="Mother Together 3D 시뮬레이터 화면"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <div class="stack" aria-label="Mother Together 기술 스택">
                 <span class="chip green">Next.js</span>
                 <span class="chip green">Vercel</span>
                 <span class="chip green">Supabase</span>
@@ -1068,12 +1673,22 @@
                 <span class="chip">Python</span>
                 <span class="chip">3D Simulator</span>
                 <span class="chip">Philips Hue</span>
+                <span class="chip pink">Pandas</span>
+                <span class="chip pink">Text Preprocessing</span>
+                <span class="chip pink">Embedding</span>
+                <span class="chip pink">PCA</span>
+                <span class="chip pink">UMAP</span>
+                <span class="chip pink">Ward Clustering</span>
+                <span class="chip pink">Silhouette Score</span>
+                <span class="chip pink">Topic Modeling</span>
+                <span class="chip pink">Opportunity Analysis</span>
               </div>
 
               <div class="project-note">
                 <strong>핵심 포인트.</strong>
-                단순 화면 프로토타입이 아니라, 사용자의 음성 입력부터 AI 판단,
-                가전 실행, 조명 반응, 3D 공간 변화, 실행 로그 저장까지 이어지는
+                469,020건의 고객 데이터에서 문제와 기회영역을 도출하고,
+                그 결과를 음성 입력 → AI 판단 → 가전·조명 제어 →
+                3D 공간 반응 → 실행 로그 저장으로 이어지는
                 시연 가능한 MVP로 구현했습니다.
               </div>
             </div>
@@ -1232,6 +1847,33 @@
       </div>
     </footer>
 
+
+    <div
+      class="image-modal"
+      id="image-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="image-modal-caption"
+      hidden
+    >
+      <div class="image-modal-dialog">
+        <button
+          class="image-modal-close"
+          id="image-modal-close"
+          type="button"
+          aria-label="이미지 크게 보기 닫기"
+        >
+          ×
+        </button>
+
+        <div class="image-modal-scroll">
+          <img class="image-modal-img" id="image-modal-img" src="" alt="" />
+        </div>
+
+        <p class="image-modal-caption" id="image-modal-caption"></p>
+      </div>
+    </div>
+
     <script>
       const reveals = document.querySelectorAll(".reveal");
 
@@ -1261,6 +1903,54 @@
           card.classList.toggle("is-open", !isOpen);
           content.hidden = isOpen;
         });
+      });
+
+      const imageModal = document.getElementById("image-modal");
+      const imageModalImg = document.getElementById("image-modal-img");
+      const imageModalCaption = document.getElementById("image-modal-caption");
+      const imageModalClose = document.getElementById("image-modal-close");
+      const imageModalButtons = document.querySelectorAll(".js-image-modal");
+
+      let lastFocusedElement = null;
+
+      function openImageModal(button) {
+        lastFocusedElement = document.activeElement;
+        imageModalImg.src = button.dataset.image;
+        imageModalImg.alt = button.dataset.caption || "프로젝트 이미지";
+        imageModalCaption.textContent =
+          button.dataset.caption || "프로젝트 이미지";
+        imageModal.hidden = false;
+        document.body.classList.add("modal-open");
+        imageModalClose.focus();
+      }
+
+      function closeImageModal() {
+        imageModal.hidden = true;
+        imageModalImg.src = "";
+        imageModalCaption.textContent = "";
+        document.body.classList.remove("modal-open");
+
+        if (lastFocusedElement) {
+          lastFocusedElement.focus();
+        }
+      }
+
+      imageModalButtons.forEach((button) => {
+        button.addEventListener("click", () => openImageModal(button));
+      });
+
+      imageModalClose.addEventListener("click", closeImageModal);
+
+      imageModal.addEventListener("click", (event) => {
+        if (event.target === imageModal) {
+          closeImageModal();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !imageModal.hidden) {
+          closeImageModal();
+        }
       });
     </script>
   </body>
