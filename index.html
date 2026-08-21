@@ -765,6 +765,28 @@
         color: #b90f49;
       }
 
+      .flow-label {
+        background: rgba(84, 56, 255, 0.08);
+        border-color: rgba(84, 56, 255, 0.2);
+        color: #4c32e6;
+      }
+
+      .flow-result {
+        background:
+          linear-gradient(
+            135deg,
+            rgba(84, 56, 255, 0.08),
+            rgba(143, 161, 132, 0.14)
+          ),
+          rgba(255, 255, 255, 0.52);
+      }
+
+      .chip.purple {
+        background: rgba(84, 56, 255, 0.08);
+        border-color: rgba(84, 56, 255, 0.18);
+        color: #4c32e6;
+      }
+
       /* 이미지 크게 보기 */
       body.modal-open {
         overflow: hidden;
@@ -1204,14 +1226,14 @@
           <div class="eyebrow">포트폴리오</div>
 
           <h1>
-            고객의 목소리를<br />
-            실제 서비스로<br />
-            구현합니다
+            문제를 이해하고<br />
+            AI와 데이터로<br />
+            실제 서비스를 구현합니다
           </h1>
 
           <p class="hero-copy">
-            사용자 데이터를 통해 문제를 정의하고, AI와 외부 API를 연결해
-            화면과 기기가 실제로 반응하는 서비스 흐름을 구현했습니다.
+            사용자와 업무 데이터를 통해 문제를 정의하고,
+            AI·Agent와 외부 API를 연결해 실제로 동작하는 서비스 흐름을 구현했습니다.
           </p>
 
           <div class="hero-actions">
@@ -1224,21 +1246,21 @@
           <div class="orbit"></div>
           <div class="orbit two"></div>
 
-          <div class="node n1">VOC 분석</div>
-          <div class="node n2">의도 분석</div>
-          <div class="node n3">가전 실행</div>
-          <div class="node n4">기록 저장</div>
+          <div class="node n1">문제 정의</div>
+          <div class="node n2">데이터 분석</div>
+          <div class="node n3">AI Agent</div>
+          <div class="node n4">서비스 실행</div>
 
           <div class="core">
-            고객 분석<br />
+            문제 정의<br />
             → AI 판단<br />
-            → 서비스 실행
+            → 서비스 구현
           </div>
 
           <div class="visual-caption">
-            <strong>고객 데이터에서 서비스 구현까지</strong>
+            <strong>문제 정의에서 동작하는 서비스까지</strong>
             <span>
-              VOC 수집·분석 → 기회영역 도출 → AI 판단 → 가전·화면 반응
+              데이터 분석 → AI·Agent 판단 → 외부 API 연동 → 실제 사용자 경험
             </span>
           </div>
         </div>
@@ -1704,11 +1726,12 @@
               <span class="project-no">02</span>
 
               <span class="project-heading">
-                <span class="project-type">VOC 데이터 기반 제품·UX 인사이트 분석</span>
-                <span class="project-title">BX / CX 데이터 분석 프로젝트</span>
+                <span class="project-type">AI Agent · HR Operations Workflow</span>
+                <span class="project-title">Flowinter</span>
                 <span class="project-summary">
-                  커뮤니티와 리뷰 데이터를 수집·전처리하고,
-                  고객의 니즈와 페인포인트를 분석해 제품 컨셉과 UX 개선 방향을 도출한 프로젝트입니다.
+                  채용 진행 지연과 미처리 업무를 AI Agent가 분석하고,
+                  확정 면접관의 Google Calendar에서 공통 가능 시간을 계산한 뒤
+                  지원자 안내 메일 초안까지 연결하는 HR Operations Agent MVP입니다.
                 </span>
               </span>
 
@@ -1716,55 +1739,256 @@
             </button>
 
             <div class="project-content" id="project-02-content" hidden>
-              <div class="project-links">
-                
-              </div>
-
               <div class="project-detail">
                 <div class="detail-box">
-                    <h4>Problem</h4>
-                    <p>
-                    스탠바이미 Go처럼 고객이 새로운 사용 상황을 떠올리게 하는 제품 기회를
-                    또 발견할 수 있을까? 또한 LGE.COM에서 고객이 탐색·구매 과정 중
-                    어떤 지점에서 불편을 느끼는지 데이터 기반으로 개선할 수 있을까?
-                    </p>
+                  <h4>Problem</h4>
+                  <p>
+                    HR 담당자는 여러 지원자의 전형 지연, 미처리 업무, 면접관 확정 여부를
+                    동시에 확인하면서 면접 일정까지 수작업으로 조율해야 합니다.
+                    정보가 흩어질수록 우선 처리해야 할 업무를 놓치기 쉽습니다.
+                  </p>
                 </div>
 
                 <div class="detail-box">
-                    <h4>Built</h4>
-                    <p>
-                    커뮤니티와 리뷰 데이터를 수집·전처리하고, 고객이 실제로 표현한
-                    상황, 불편, 니즈를 분류해 제품 기회와 UX 개선 포인트로 구조화했습니다.
-                    </p>
+                  <h4>Approach</h4>
+                  <p>
+                    Spring Boot와 PostgreSQL을 업무 상태의 기준으로 두고,
+                    Hermes가 요청을 조율하며 Agentria Domain Ability가
+                    리스크 분석과 면접 가능 시간 계산을 수행하도록 역할을 분리했습니다.
+                  </p>
                 </div>
 
                 <div class="detail-box">
-                <h4>Result</h4>
-                <p>
-                    BX 프로젝트에서는 여행 중 의류 관리 니즈를 바탕으로 AI Styler Go
-                    컨셉을 도출했고, CX 프로젝트에서는 고객이 제품 정보를 찾고 비교한 뒤
-                    구매를 결정하는 과정에서 겪는 불편을 분석해 LGE.COM의 탐색 흐름,
-                    정보 배치, 구매 전환 UX 개선 방향을 제안했습니다.
-                </p>
+                  <h4>Role</h4>
+                  <p>
+                    채용 도메인 모델링, Backend API, HR Dashboard,
+                    Hermes·Agentria 연동, Google Calendar 일정 조회,
+                    지원자 안내 메일 초안 생성까지 전체 업무 흐름을 구현했습니다.
+                  </p>
                 </div>
+              </div>
+
+              <section class="bxcx-section" aria-labelledby="flowinter-flow-title">
+                <div class="bxcx-head">
+                  <div>
+                    <span class="bxcx-label flow-label">AI Agent Workflow</span>
+                    <h3 class="bxcx-title" id="flowinter-flow-title">
+                      채용 운영 요청이 실제 업무 결과로 이어지는 과정
+                    </h3>
+                  </div>
+
+                  <p class="bxcx-desc">
+                    채용 현황 확인부터 오늘의 우선 업무 분석,
+                    면접관 일정 조회, 공통 가능 시간 선택,
+                    지원자 안내 메일 초안 생성까지 하나의 업무 흐름으로 연결했습니다.
+                    이미지를 클릭하면 크게 볼 수 있습니다.
+                  </p>
                 </div>
 
-              <div class="stack">
-                <span class="chip green">Python</span>
-                <span class="chip green">Pandas</span>
-                <span class="chip green">Selenium</span>
-                <span class="chip">Web Crawling</span>
-                <span class="chip">Text Preprocessing</span>
-                <span class="chip">TF-IDF</span>
-                <span class="chip">K-means</span>
-                <span class="chip">LDA</span>
-                <span class="chip">Wordcloud</span>
+                <div class="bxcx-flow">
+                  <figure class="bxcx-item">
+                    <button
+                      class="zoom-button js-image-modal"
+                      type="button"
+                      data-image="assets/flowinter-01-dashboard.png"
+                      data-caption="채용 진행 현황과 운영 리스크 한눈에 확인"
+                      aria-label="Flowinter 채용 진행 현황 대시보드 이미지 크게 보기"
+                    >
+                      <img
+                        src="assets/flowinter-01-dashboard.png"
+                        alt="진행 중 지원자, 진행 지연, 미처리 업무, 면접관 확정 필요 건수를 보여주는 Flowinter 대시보드"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </button>
+
+                    <figcaption class="bxcx-caption">
+                      <span class="bxcx-step">01</span>
+                      <div class="bxcx-copy">
+                        <strong>채용 진행 현황과 운영 리스크 한눈에 확인</strong>
+                        <p>진행 중 지원자, 진행 지연, 미처리 업무, 면접관 확정 필요 건수를 요약해 HR이 현재 채용 운영 상태를 빠르게 파악하도록 구성했습니다.</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+
+                  <figure class="bxcx-item">
+                    <button
+                      class="zoom-button js-image-modal"
+                      type="button"
+                      data-image="assets/flowinter-02-applications.png"
+                      data-caption="지원자별 진행 상태와 미처리 업무 구조화"
+                      aria-label="Flowinter 지원자 진행 현황 목록 이미지 크게 보기"
+                    >
+                      <img
+                        src="assets/flowinter-02-applications.png"
+                        alt="지원번호, 지원 직무, 현재 단계, 단계 경과, 미처리 업무, 면접관 상태를 보여주는 지원자 진행 현황"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </button>
+
+                    <figcaption class="bxcx-caption">
+                      <span class="bxcx-step">02</span>
+                      <div class="bxcx-copy">
+                        <strong>지원자별 진행 상태와 미처리 업무 구조화</strong>
+                        <p>지원번호를 기준으로 현재 단계, 단계 경과 시간, 미처리 업무, 면접관 상태를 Application 단위로 조회해 후속 업무 판단에 필요한 정보를 구조화했습니다.</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+
+                  <figure class="bxcx-item">
+                    <button
+                      class="zoom-button js-image-modal"
+                      type="button"
+                      data-image="assets/flowinter-03-priority-analysis.png"
+                      data-caption="오늘 먼저 확인할 업무 우선순위 분석"
+                      aria-label="Flowinter 오늘 업무 우선순위 분석 결과 이미지 크게 보기"
+                    >
+                      <img
+                        src="assets/flowinter-03-priority-analysis.png"
+                        alt="진행 지연, 미처리 업무, 면접관 상태를 기반으로 우선 확인 업무와 권장 조치를 보여주는 화면"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </button>
+
+                    <figcaption class="bxcx-caption">
+                      <span class="bxcx-step">03</span>
+                      <div class="bxcx-copy">
+                        <strong>오늘 먼저 확인할 업무 우선순위 분석</strong>
+                        <p>진행 지연, 미처리 업무, 면접관 상태를 종합해 HR이 먼저 확인하면 좋은 지원 건과 확인 이유, 권장 조치를 제시하도록 구현했습니다.</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+
+                  <figure class="bxcx-item">
+                    <button
+                      class="zoom-button js-image-modal"
+                      type="button"
+                      data-image="assets/flowinter-04-work-detail.png"
+                      data-caption="지원 건 상세에서 면접관 상태 확인"
+                      aria-label="Flowinter 우선 확인 업무 상세 이미지 크게 보기"
+                    >
+                      <img
+                        src="assets/flowinter-04-work-detail.png"
+                        alt="지원 건의 현재 단계, 지연 상태, 면접관 상태와 관련 팀 면접 가능 인원을 보여주는 상세 화면"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </button>
+
+                    <figcaption class="bxcx-caption">
+                      <span class="bxcx-step">04</span>
+                      <div class="bxcx-copy">
+                        <strong>지원 건 상세에서 면접관 상태 확인</strong>
+                        <p>우선 확인 대상으로 선정된 Application의 진행 상태와 관련 팀, 면접관 정보를 함께 보여줘 HR이 다음 업무로 자연스럽게 이어갈 수 있도록 구성했습니다.</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+
+                  <figure class="bxcx-item">
+                    <button
+                      class="zoom-button js-image-modal"
+                      type="button"
+                      data-image="assets/flowinter-05-calendar-search.png"
+                      data-caption="확정 면접관 기준으로 일정 조회"
+                      aria-label="Flowinter 면접 일정 조회 기간 선택 화면 이미지 크게 보기"
+                    >
+                      <img
+                        src="assets/flowinter-05-calendar-search.png"
+                        alt="면접관 확정 완료 상태의 지원자에서 조회 시작일과 종료일을 지정해 가능한 시간을 조회하는 화면"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </button>
+
+                    <figcaption class="bxcx-caption">
+                      <span class="bxcx-step">05</span>
+                      <div class="bxcx-copy">
+                        <strong>확정 면접관 기준으로 일정 조회</strong>
+                        <p>면접관이 확정된 지원 건에서 조회 기간을 지정하면 해당 면접관들의 Google Calendar Busy 정보를 바탕으로 공통 가능 시간 계산을 시작합니다.</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+
+                  <figure class="bxcx-item">
+                    <button
+                      class="zoom-button js-image-modal"
+                      type="button"
+                      data-image="assets/flowinter-06-available-slots.png"
+                      data-caption="공통 가능한 면접 시간 계산 및 선택"
+                      aria-label="Flowinter 가능한 면접 시간 선택 화면 이미지 크게 보기"
+                    >
+                      <img
+                        src="assets/flowinter-06-available-slots.png"
+                        alt="계산된 면접 가능 시간 중 세 개의 후보 시간을 선택한 Flowinter 화면"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </button>
+
+                    <figcaption class="bxcx-caption">
+                      <span class="bxcx-step">06</span>
+                      <div class="bxcx-copy">
+                        <strong>공통 가능한 면접 시간 계산 및 선택</strong>
+                        <p>근무시간, 점심시간, 주말·공휴일과 기존 Busy 일정을 제외해 공통 가능한 슬롯을 생성하고, HR이 지원자에게 제안할 후보 시간을 최대 3개까지 선택하도록 구현했습니다.</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+
+                  <figure class="bxcx-item">
+                    <button
+                      class="zoom-button js-image-modal"
+                      type="button"
+                      data-image="assets/flowinter-07-email-draft.png"
+                      data-caption="선택한 시간으로 지원자 안내 메일 초안 생성"
+                      aria-label="Flowinter 지원자 면접 일정 조율 메일 초안 이미지 크게 보기"
+                    >
+                      <img
+                        src="assets/flowinter-07-email-draft.png"
+                        alt="선택한 세 개의 면접 후보 시간이 포함된 Gmail 지원자 안내 메일 초안"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </button>
+
+                    <figcaption class="bxcx-caption">
+                      <span class="bxcx-step">07</span>
+                      <div class="bxcx-copy">
+                        <strong>선택한 시간으로 지원자 안내 메일 초안 생성</strong>
+                        <p>선택한 면접 후보 시간을 기반으로 지원자 안내 메일 초안을 생성하되 자동 발송하지 않고, HR 담당자가 최종 검토 후 발송하도록 Human-in-the-loop 원칙을 적용했습니다.</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="bxcx-result flow-result">
+                  <strong>AI Agent의 판단을 실제 HR 업무 흐름으로 연결했습니다.</strong>
+                  <p>
+                    채용 상태 확인 → 업무 우선순위 분석 → 면접관 일정 조회 →
+                    공통 가능 시간 계산 → 지원자 안내 메일 초안 생성까지
+                    하나의 시연 가능한 HR Operations Workflow로 구현했습니다.
+                  </p>
+                </div>
+              </section>
+
+              <div class="stack" aria-label="Flowinter 기술 스택">
+                <span class="chip green">Next.js</span>
+                <span class="chip green">Spring Boot</span>
+                <span class="chip green">PostgreSQL</span>
+                <span class="chip purple">Hermes</span>
+                <span class="chip purple">Agentria</span>
+                <span class="chip">Google Calendar API</span>
+                <span class="chip">Gmail</span>
+                <span class="chip">Java 21</span>
+                <span class="chip">Python</span>
+                <span class="chip">Docker</span>
               </div>
 
               <div class="project-note">
-                <strong>핵심 포인트.</strong>
-                단순히 데이터를 수집하는 데서 끝내지 않고, 실제 사용자의 언어를 기반으로
-                니즈와 페인포인트를 정리한 뒤 제품 컨셉과 UX 개선 방향으로 연결했습니다.
+                <strong>설계 원칙.</strong>
+                AI는 판단과 제안을 담당하고, Human은 최종 승인하며,
+                Spring Boot가 실제 업무 상태 변경을 통제하도록 역할을 분리했습니다.
               </div>
             </div>
           </article>
@@ -1797,7 +2021,7 @@
             <span>02</span>
             <h3>데이터 기반 사고</h3>
             <p>
-              사용자 발화, 리뷰, 커뮤니티 데이터를 분석해 문제를 구조화하는 경험을 쌓았습니다.
+              VOC와 업무 상태 데이터를 분석해 사용자의 불편과 운영 문제를 구조화하는 경험을 쌓았습니다.
             </p>
           </div>
 
@@ -1805,7 +2029,7 @@
             <span>03</span>
             <h3>API 연동</h3>
             <p>
-              AI 판단 결과를 외부 API와 연결해 실제 화면과 기기가 반응하도록 구현했습니다.
+              AI 판단 결과를 외부 API와 연결해 화면, 기기, 캘린더와 메일이 실제로 동작하도록 구현했습니다.
             </p>
           </div>
 
